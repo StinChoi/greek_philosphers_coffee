@@ -1,5 +1,5 @@
 class PhilosController < ApplicationController
-  before_action :set_ohilo, only: [:show, :update, :edit, :destroy]
+  before_action :set_philo, only: [:show, :update, :edit, :destroy]
 
   def index
     @philos = Philo.all
@@ -7,7 +7,7 @@ class PhilosController < ApplicationController
   end
 
   def show
-    render component: "Philo", props: {philo: @philo}
+    render component: "Philo", props:{philo: @philo}
   end
 
   def new
